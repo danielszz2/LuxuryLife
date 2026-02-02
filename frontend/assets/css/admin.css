@@ -1,0 +1,166 @@
+/* admin.css */
+.admin-wrap {
+  max-width: 1100px;
+  margin: 90px auto 40px;
+  padding: 0 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.admin-top h2 {
+  margin: 0;
+}
+
+.hint {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.panel {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.panel h3 {
+  margin-top: 0;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  font-size: 12px;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+.field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.admin-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #0b0b0b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.admin-btn.primary {
+  border-color: #69DA0D;
+}
+
+.admin-btn.danger {
+  border-color: #ff4d4d;
+}
+
+.admin-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.table-wrap {
+  overflow: auto;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #222;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+td small {
+  opacity: 0.75;
+}
+
+.action-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - LuxuryLife</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- ✅ NEW Admin CSS -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40">
+          <polygon points="32,4 60,24 50,60 14,60 4,24" fill="#69DA0D" stroke="#ffffff" stroke-width="2"/>
+          <line x1="32" y1="4" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+          <line x1="4" y1="24" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+          <line x1="60" y1="24" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+        </svg>
+        <span>LuxuryLife</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="my-orders.html">My Orders</a>
+      </nav>
+
+      <div class="admin-header-right">
+        <span class="admin-badge" id="admin-status">Checking admin…</span>
+        <button class="admin-btn" id="logout-btn" type="button">Logout</button>
+      </div>
+    </div>
+  </header>
+
+   <div class="hero-overlay"></div>
+
+  <main class="admin-wrap">
+    <div class="admin-top">
+      <h2>Admin Products</h2>
+      <p class="hint">Manage products in your database (admin only).</p>
+    </div>
+
+    <section class="panel">
+      <h3>Create / Update Product</h3>
+
+      <div class="grid grid-3">
+        <div class="field">
+          <label>Product ID (for update)</label>
+          <input id="p-id" placeholder="Leave empty to create new">
+        </div>
+        <div class="field">
+          <label>Name</label>
+          <input id="p-name" placeholder="Kid Costume">
+        </div>
+        <div class="field">
+          <label>Price</label>
+          <input id="p-price" placeholder="10.00">
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="field">
+          <label>Image Path</label>
+          <input id="p-imagePath" placeholder="assets/images/cloth.webp">
+        </div>
+        <div class="field">
+          <label>Category</label>
+          <input id="p-category" placeholder="kids / men / women">
+        </div>
+        <div class="field">
+          <label>SubCategory</label>
+          <input id="p-subCategory" placeholder="costume / shoes / dress…">
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="field">
+          <label>Sizes CSV</label>
+          <input id="p-sizesCsv" placeholder="S,M,L,XL">
+        </div>
+        <div class="field">
+          <label>Stock</label>
+          <input id="p-stock" placeholder="100">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Description</label>
+        <textarea id="p-description" placeholder="Product description…"></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="admin-btn primary" id="save-btn" type="button">Save (Create/Update)</button>
+        <button class="admin-btn" id="clear-btn" type="button">Clear Form</button>
+      </div>
+
+      <p class="hint">Tip: Click “Edit” on a product below to load it into the form.</p>
+    </section>
+
+    <section class="panel">
+      <div class="admin-top-row">
+        <h3>All Products</h3>
+        <button class="admin-btn" id="refresh-btn" type="button">Refresh</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="products-tbody">
+            <tr><td colspan="6">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Policy</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul class="socials">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center; padding:15px; margin:0; border-top:1px solid #333;">© 2026 LuxuryLife. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/admin.js"></script>
+  <script src="assets/js/background.js"></script>
+</body>
+</html>

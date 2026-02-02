@@ -1,0 +1,141 @@
+
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: blur(5px);
+  transition: background 0.3 ease;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo svg { 
+  width: 40px; 
+  height: 40px; 
+  transition: transform 0.3s ease; 
+}
+
+.logo:hover svg {
+  transform: scale(1.1) rotate(10deg);
+ }
+
+.logo:hover span { 
+  color: #69DA0D;
+}
+
+.main-nav {
+  flex: 8;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-nav a:hover { 
+  color: #27ae60; 
+}
+
+.cart { 
+  flex: 1; 
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center; 
+  gap: 8px; 
+  position: relative;
+ }
+
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0; top: 40px;
+  background: #1e1e1e;
+  color: #f5f5f5;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  padding: 15px;
+  z-index: 20;
+}
+.cart-dropdown p { 
+  font-weight: bold; 
+  margin: 10px 0; 
+  border-top: 1px solid #333; 
+  padding-top: 5px;
+ }
+
+.cart-dropdown button {
+  width: 100%; 
+  padding: 8px 0; 
+  border: none; 
+  border-radius: 6px;
+  background: #27ae60; 
+  color: #fff; 
+  cursor: pointer; 
+  font-weight: 600; 
+  margin-top: 10px;
+}
+
+.cart-dropdown button:hover { 
+  background: #1e8449;
+}
+
+#cart-count { 
+  display: inline-block; 
+  background: #27ae60; 
+  color: #fff; 
+  font-size: 14px; 
+  font-weight: bold; 
+  padding: 2px 7px; 
+  border-radius: 50%; 
+  margin-left: 5px; 
+  vertical-align: top; 
+}
+
+.my-orders-btn,
+.admin-btn {
+  margin-left: 12px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.my-orders-btn {
+  background: #69da0d;
+  color: #000;
+}
+
+.admin-btn {
+  background: #ff6b6b;
+  color: #fff;
+}

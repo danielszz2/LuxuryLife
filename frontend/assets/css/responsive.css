@@ -1,0 +1,256 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-page {
+  padding: 10px;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-info h1 {
+  font-size: 1.5rem;
+}
+
+.product-info .price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-info label {
+  font-weight: 500;
+}
+
+.product-info input[type="number"],
+.product-info select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.product-info button#add-to-cart {
+  background-color: #69DA0D;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.product-info button#add-to-cart:hover {
+  background-color: #57b80b;
+}
+
+.choose-more {
+  margin-top: 20px;
+}
+
+.more-products {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.more-products .card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.more-products .card img {
+  width: 80px;
+  border-radius: 4px;
+}
+
+.more-products .card h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.more-products .card p {
+  margin: 0;
+  font-weight: 500;
+  color: #555;
+}
+
+.more-products .card button {
+  margin-left: auto;
+  background-color: #69DA0D;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.more-products .card button:hover {
+  background-color: #57b80b;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logout-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background-color: #e63939;
+}
+
+@media screen and (max-width: 767px) {
+  .header-inner {
+    flex-direction: row;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .header-right {
+    width: auto;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  #logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cart-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-detail {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .product-image,
+  .product-info {
+    flex: 1;
+  }
+
+  .more-products {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .more-products .card {
+    flex: 1 1 calc(33.333% - 20px);
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .more-products .card img {
+    width: 100%;
+  }
+
+  #logout-btn {
+    width: auto;
+    margin-left: 20px;
+    padding: 8px 15px;
+  }
+
+    .policy-page {
+    padding: 40px 15px;
+  }
+
+  .policy-page section {
+    padding: 25px 20px;
+  }
+
+  .policy-page h2 {
+    font-size: 2rem;
+  }
+
+  .policy-page h3 {
+    font-size: 1.3rem;
+  }
+
+  .policy-page p, .policy-page ul li {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .product-detail {
+    gap: 40px;
+  }
+
+  .product-info h1 {
+    font-size: 2rem;
+  }
+
+  .product-info .price {
+    font-size: 1.5rem;
+  }
+
+  .more-products .card {
+    flex: 1 1 calc(25% - 20px);
+  }
+
+  #logout-btn {
+    margin-left: 30px;
+    padding: 10px 20px;
+  }
+}
+

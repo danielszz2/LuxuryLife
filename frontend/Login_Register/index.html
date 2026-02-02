@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="hero-overlay"></div>
+
+  <div class="logo-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="90" height="90">
+      <polygon points="32,4 60,24 50,60 14,60 4,24" fill="#69DA0D" stroke="#ffffff" stroke-width="2"/>
+      <line x1="32" y1="4" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+      <line x1="4" y1="24" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+      <line x1="60" y1="24" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <main class="auth-container">
+
+    <div class="auth-card" id="login-card">
+      <h2>Login</h2>
+
+      <form id="login-form">
+        <input id="login-email" type="email" placeholder="Email" required>
+        <input id="login-password" type="password" placeholder="Password" required>
+        <button id="login-btn" type="submit">Login</button>
+      </form>
+
+      <div id="react-root"></div>
+
+      <p>Don't have an account?
+        <span class="switch" onclick="toggleForms()">Sign Up</span>
+      </p>
+    </div>
+
+    <div class="auth-card hidden" id="register-card">
+      <h2>Register</h2>
+
+      <form id="register-form">
+        <input id="register-name" type="text" placeholder="Full Name" required>
+        <input id="register-email" type="email" placeholder="Email" required>
+        <input id="register-password" type="password" placeholder="Password" required>
+        <button id="register-btn" type="submit">Sign Up</button>
+      </form>
+
+      <p>Already have an account?
+        <span class="switch" onclick="toggleForms()">Login</span>
+      </p>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+  <script src="../assets/js/login.js"></script>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script>
+    function InfoBox() {
+      return React.createElement(
+        "p",
+        {
+          style: {
+            marginTop: "12px",
+            fontSize: "12px",
+            textAlign: "center",
+            color: "#aaa"
+          }
+        },
+        "This authentication page is built using HTML, CSS, JavaScript, and React."
+      );
+    }
+
+    ReactDOM.render(
+      React.createElement(InfoBox),
+      document.getElementById("react-root")
+    );
+  </script>
+
+</body>
+</html>
+
+
+
+

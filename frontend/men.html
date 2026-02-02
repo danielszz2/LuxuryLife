@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Men Collection - LuxuryLife</title>
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/products.css">
+  <link rel="stylesheet" href="assets/css/filters.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/cart.css">
+
+</head>
+<body data-category="men">
+
+  <header class="site-header">
+    <div class="header-inner">
+   
+      <a href="index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40">
+          <polygon points="32,4 60,24 50,60 14,60 4,24" fill="#69DA0D" stroke="#ffffff" stroke-width="2"/>
+          <line x1="32" y1="4" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+          <line x1="4" y1="24" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+          <line x1="60" y1="24" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+        </svg>
+        <span>LuxuryLife</span>
+      </a>
+
+     
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a href="my-orders.html" id="my-orders-btn" class="my-orders-btn">
+              My Orders
+        </a>
+   
+       <div class="cart-container" id="cart-container">
+        <div class="cart">
+          <span class="cart-icon">🛍️</span>
+          <span id="cart-count">0</span>
+          <a href="cart.html">Cart</a>
+        </div>
+
+        <div class="cart-dropdown" id="cart-dropdown">
+          <div id="dropdown-items"></div>
+          <p id="dropdown-total"></p>
+          <button id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <button id="logout-btn">Logout</button>
+
+    <nav class="category-nav">
+      <a href="shop.html">All</a>
+      <a href="men.html" class="active">Men</a>
+      <a href="woman.html">Women</a>
+      <a href="kid.html">Kids</a>
+    </nav>
+  </header>
+
+  <div class="hero-overlay"></div>
+
+  <main>
+    <h2 class="section-title">Men Collection</h2>
+    <div class="products">
+      <div class="card" data-product-id="7"><a href="products/Men_hoodie.html"><img src="assets/images/clM.webp" alt="Product 5"></a><h3>Man Hoodie</h3><p>$20.00</p><button>Add to Cart</button></div>
+      <div class="card" data-product-id="8"><a href="products/Men_Jacket_Blue.html"><img src="assets/images/clM2.jpg" alt="Product 9"></a><h3>Man Jacket Blue</h3><p>$150.00</p><button>Add to Cart</button></div>
+      <div class="card" data-product-id="11"><a href="products/Men_Watch.html"><img src="assets/images/men_watch.webp" alt="Men Watch"></a><h3>Men Watch</h3><p>$299</p><button>Add to Cart</button></div>
+      <div class="card" data-product-id="10"><a href="products/Men_Shoes.html"><img src="assets/images/men_shoes.jpg" alt="Men Shoes"></a><h3>Men Shoes</h3><p>$199</p><button>Add to Cart</button></div>
+      <div class="card" data-product-id="12"><a href="products/Men_Watch_2.html"><img src="assets/images/men_watch_2.webp" alt="Men Watch"></a><h3>Men Watch Blue</h3><p>$299</p><button>Add to Cart</button></div>
+      <div class="card" data-product-id="9"><a href="products/Men_Jeans.html"><img src="assets/images/men_jeans.jpg" alt="Men Jeans"></a><h3>Men Jeans</h3><p>$199</p><button>Add to Cart</button></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Policy</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul class="socials">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center; padding:15px; margin:0; border-top:1px solid #333;">© 2026 LuxuryLife. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/background.js"></script>
+  <script src="assets/js/logout.js"></script>
+  <script src="assets/js/my-order-button.js"></script>
+</body>
+</html>
