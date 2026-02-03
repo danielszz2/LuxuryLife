@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   grid.innerHTML = "<p style='padding:20px; color:white;'>Loading products from backend...</p>";
 
   try {
-    const res = await fetch("http://localhost:8080/api/products");
+    const res = await fetch("https://luxurylife.onrender.com/api/products");
 
     const text = await res.text();
     console.log("RAW /api/products response:", text);

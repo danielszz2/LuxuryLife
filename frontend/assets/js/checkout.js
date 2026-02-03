@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!checkoutItemsEl || !checkoutTotalEl || !placeOrderBtn) return;
 
-  // ---------------------------
-  // Render checkout summary
-  // ---------------------------
   if (cart.length === 0) {
     checkoutItemsEl.innerHTML = "<p>Your cart is empty.</p>";
     placeOrderBtn.disabled = true;
@@ -39,9 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkoutTotalEl.textContent = `Total: $${total.toFixed(2)}`;
 
-  // ---------------------------
-  // Place order (calls backend) - Step F requires token
-  // ---------------------------
   placeOrderBtn.addEventListener("click", async () => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -49,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // refresh cart in case it changed
     cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if (cart.length === 0) {
@@ -57,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // require productId
     const missing = cart.find(i => i.productId == null || Number.isNaN(Number(i.productId)));
     if (missing) {
       alert(
@@ -69,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Read delivery fields (make sure your checkout.html has these IDs)
     const firstName = document.getElementById("firstName")?.value?.trim() || "";
     const lastName  = document.getElementById("lastName")?.value?.trim() || "";
     const phone     = document.getElementById("phone")?.value?.trim() || "";
@@ -97,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     placeOrderBtn.textContent = "Placing order...";
 
     try {
-      const res = await fetch("http://localhost:8080/api/orders", {
+      const res = await fetch("https://luxurylife.onrender.com/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

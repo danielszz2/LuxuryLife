@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API = "http://localhost:8080";
+  const API = "https://luxurylife.onrender.com";
   const token = localStorage.getItem("token");
 
   const statusEl = document.getElementById("admin-status");
   const logoutBtn = document.getElementById("logout-btn");
   const tbody = document.getElementById("products-tbody");
 
-  // form inputs
   const idEl = document.getElementById("p-id");
   const nameEl = document.getElementById("p-name");
   const priceEl = document.getElementById("p-price");
