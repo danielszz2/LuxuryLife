@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/Login_Register/index.html",
+      "permanent": false
+    }
+  ]
+}

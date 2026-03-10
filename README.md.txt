@@ -1,0 +1,183 @@
+🛍️ LuxuryLife – Full Stack E-Commerce Project
+
+LuxuryLife is a full-stack e-commerce web application built with Spring Boot (Java) on the backend and HTML / CSS / JavaScript on the frontend. It supports authentication, orders, admin features, JWT security, and H2 database.
+
+🚀 Features 👤 Authentication & Security
+
+User registration & login
+
+JWT-based authentication
+
+Role-based access:
+
+USER
+
+ADMIN
+
+Secure endpoints with Spring Security
+
+Password hashing using BCrypt
+
+🛒 Shop & Orders
+
+Product listing
+
+Add to cart
+
+Checkout
+
+Create orders
+
+View My Orders (logged-in users only)
+
+👑 Admin Features
+
+Admin role support
+
+Admin-only access to /admin.html
+
+Admin button shown only for ADMIN users
+
+Role stored in DB and JWT (role claim)
+
+🗄️ Database
+
+H2 in-memory database
+
+Auto schema generation with JPA/Hibernate
+
+H2 Console enabled for debugging
+
+🧱 Tech Stack Backend
+
+Java 17
+
+Spring Boot
+
+Spring Security
+
+Spring Data JPA
+
+JWT (jjwt)
+
+H2 Database
+
+Maven
+
+Frontend
+
+HTML5
+
+CSS3
+
+JavaScript (Vanilla)
+
+LocalStorage for JWT & cart
+
+Fetch API
+
+📁 Project Structure (Backend) backend/ └── src/main/java/com/luxurylife/backend ├── config │ ├── SecurityConfig.java │ └── CorsConfig.java ├── controller │ ├── AuthController.java │ ├── ProductController.java │ └── OrderController.java ├── dto ├── model │ ├── User.java │ ├── Product.java │ ├── Order.java │ └── OrderItem.java ├── repository ├── security │ ├── JwtAuthFilter.java │ └── JwtService.java └── service
+
+▶️ How to Run 1️⃣ Backend cd backend ./mvnw spring-boot:run
+
+Backend runs on:
+
+http://localhost:8080
+
+2️⃣ Frontend
+
+Open frontend using:
+
+VS Code Live Server
+
+OR open index.html in browser
+
+Frontend usually runs on:
+
+http://127.0.0.1:5500
+
+🔐 Authentication Flow Register POST /api/auth/register
+
+Login POST /api/auth/login
+
+Response contains:
+
+{ "token": "JWT_TOKEN", "id": 1, "email": "user@example.com" }
+
+Token is stored in localStorage.
+
+🔑 JWT Token Structure
+
+JWT contains:
+
+{ "sub": "1", "email": "admin@example.com", "role": "ADMIN", "iat": 123456, "exp": 123456 }
+
+📦 Orders API Create Order (Authenticated) POST /api/orders Authorization: Bearer
+
+My Orders GET /api/orders/my Authorization: Bearer
+
+👑 Admin Access Admin-only endpoints /api/admin/**
+
+Admin UI admin.html
+
+Admin button:
+
+Visible only if JWT role = ADMIN
+
+Admin Login:
+
+email: admin@example.com password: admin1234]
+
+User Login:
+
+email: user@example.com password: user1234
+
+🧪 H2 Database
+
+Access H2 Console:
+
+http://localhost:8080/h2-console
+
+Settings:
+
+JDBC URL: jdbc:h2:mem:luxurylife Username: sa Password: (empty)
+
+🧠 Key Concepts Implemented
+
+JWT authentication & authorization
+
+Role-based UI rendering
+
+Secure backend validation
+
+Transactional order creation
+
+Stock checking
+
+Separation of concerns (Controller / Service / Repository)
+
+✅ Project Status
+
+✔ Authentication ✔ Authorization (USER / ADMIN) ✔ Orders & Checkout ✔ Admin Panel ✔ Secure Backend ✔ Frontend Integration
+
+Project is complete and production-ready for learning/demo purposes.
+
+✨ Future Improvements (Optional)
+
+Pagination
+
+Product search & filters
+
+Order details page
+
+Admin product CRUD
+
+Payment gateway integration
+
+Persistent database (PostgreSQL / MySQL)
+
+🧑‍💻 Author
+
+Daniels Krahmalovs
+
+LuxuryLife Project Built as a full-stack learning & portfolio project.
