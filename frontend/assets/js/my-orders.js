@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const res = await fetch("https://luxurylife.onrender.com/api/orders/my", {
+    const res = await fetch("https://luxurylife-production.up.railway.app/api/orders/my", {
       headers: { Authorization: `Bearer ${token}` }
     });
 

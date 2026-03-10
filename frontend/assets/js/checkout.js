@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     placeOrderBtn.textContent = "Placing order...";
 
     try {
-      const res = await fetch("https://luxurylife.onrender.com/api/orders", {
+      const res = await fetch("https://luxurylife-production.up.railway.app/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

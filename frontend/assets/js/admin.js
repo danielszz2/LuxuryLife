@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API = "https://luxurylife.onrender.com";
+  const API = "https://luxurylife-production.up.railway.app";
   const token = localStorage.getItem("token");
 
   const statusEl = document.getElementById("admin-status");
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "Authorization": `Bearer ${token}`
     };
   }
-
   function authHeaderOnly() {
     return { "Authorization": `Bearer ${token}` };
   }
